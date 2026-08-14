@@ -2,7 +2,7 @@
   "site": {
     "brand": "Nikola.dsgn",
     "tagline": "Custom Design Studio — Feed, Poster, Banner & Cetak",
-    "owner": "Nikola.dsgn Studio",
+    "owner": "Nikola.dsgn",
     "year": "2026",
     "whatsapp": "6281234567890",
     "instagram": "nikola.dsgn",
@@ -21,10 +21,34 @@
         "Desain dibuat dengan aplikasi Affinity dan/atau Canva"
       ],
       "tiers": [
-        { "name": "Satuan", "badge": "", "qty": "1 feed", "price": "Rp50.000", "duration": "1-2 hari" },
-        { "name": "Bronze", "badge": "🥉", "qty": "9 feed", "price": "Rp349.000", "duration": "3-5 hari" },
-        { "name": "Silver", "badge": "🥈", "qty": "15 feed", "price": "Rp599.000", "duration": "5-7 hari" },
-        { "name": "Gold", "badge": "🥇", "qty": "30 feed", "price": "Rp1.099.000", "duration": "7-10 hari" }
+        {
+          "name": "Satuan",
+          "badge": "",
+          "qty": "1 feed",
+          "price": "Rp450.000",
+          "duration": "1-2 hari"
+        },
+        {
+          "name": "Bronze",
+          "badge": "🥉",
+          "qty": "9 feed",
+          "price": "Rp349.000",
+          "duration": "3-5 hari"
+        },
+        {
+          "name": "Silver",
+          "badge": "🥈",
+          "qty": "15 feed",
+          "price": "Rp599.000",
+          "duration": "5-7 hari"
+        },
+        {
+          "name": "Gold",
+          "badge": "🥇",
+          "qty": "30 feed",
+          "price": "Rp1.099.000",
+          "duration": "7-10 hari"
+        }
       ]
     },
     {
@@ -39,9 +63,27 @@
         "Desain dibuat dengan aplikasi Affinity dan/atau Canva"
       ],
       "tiers": [
-        { "name": "Bronze", "badge": "🥉", "qty": "5 slide", "price": "Rp179.000", "duration": "1-2 hari" },
-        { "name": "Silver", "badge": "🥈", "qty": "7 slide", "price": "Rp249.000", "duration": "2-3 hari" },
-        { "name": "Gold", "badge": "🥇", "qty": "10 slide", "price": "Rp349.000", "duration": "3-5 hari" }
+        {
+          "name": "Bronze",
+          "badge": "🥉",
+          "qty": "5 slide",
+          "price": "Rp179.000",
+          "duration": "1-2 hari"
+        },
+        {
+          "name": "Silver",
+          "badge": "🥈",
+          "qty": "7 slide",
+          "price": "Rp249.000",
+          "duration": "2-3 hari"
+        },
+        {
+          "name": "Gold",
+          "badge": "🥇",
+          "qty": "10 slide",
+          "price": "Rp349.000",
+          "duration": "3-5 hari"
+        }
       ]
     },
     {
@@ -55,10 +97,34 @@
         "Request file master (.af / .psd) dikenakan biaya tambahan"
       ],
       "tiers": [
-        { "name": "Satuan", "badge": "", "qty": "1 desain", "price": "Rp75.000", "duration": "1-2 hari" },
-        { "name": "Bronze", "badge": "🥉", "qty": "3 desain", "price": "Rp199.000", "duration": "2-3 hari" },
-        { "name": "Silver", "badge": "🥈", "qty": "5 desain", "price": "Rp319.000", "duration": "3-5 hari" },
-        { "name": "Gold", "badge": "🥇", "qty": "10 desain", "price": "Rp599.000", "duration": "5-7 hari" }
+        {
+          "name": "Satuan",
+          "badge": "",
+          "qty": "1 desain",
+          "price": "Rp75.000",
+          "duration": "1-2 hari"
+        },
+        {
+          "name": "Bronze",
+          "badge": "🥉",
+          "qty": "3 desain",
+          "price": "Rp199.000",
+          "duration": "2-3 hari"
+        },
+        {
+          "name": "Silver",
+          "badge": "🥈",
+          "qty": "5 desain",
+          "price": "Rp319.000",
+          "duration": "3-5 hari"
+        },
+        {
+          "name": "Gold",
+          "badge": "🥇",
+          "qty": "10 desain",
+          "price": "Rp599.000",
+          "duration": "5-7 hari"
+        }
       ]
     },
     {
@@ -72,9 +138,27 @@
         "Perubahan ukuran setelah desain jadi dihitung revisi tambahan"
       ],
       "tiers": [
-        { "name": "Satuan", "badge": "", "qty": "1 desain", "price": "Rp100.000", "duration": "1-2 hari" },
-        { "name": "Bronze", "badge": "🥉", "qty": "3 desain", "price": "Rp269.000", "duration": "2-4 hari" },
-        { "name": "Silver", "badge": "🥈", "qty": "5 desain", "price": "Rp429.000", "duration": "4-6 hari" }
+        {
+          "name": "Satuan",
+          "badge": "",
+          "qty": "1 desain",
+          "price": "Rp100.000",
+          "duration": "1-2 hari"
+        },
+        {
+          "name": "Bronze",
+          "badge": "🥉",
+          "qty": "3 desain",
+          "price": "Rp269.000",
+          "duration": "2-4 hari"
+        },
+        {
+          "name": "Silver",
+          "badge": "🥈",
+          "qty": "5 desain",
+          "price": "Rp429.000",
+          "duration": "4-6 hari"
+        }
       ]
     },
     {
@@ -88,9 +172,27 @@
         "Copywriting isi disediakan oleh klien"
       ],
       "tiers": [
-        { "name": "Satuan", "badge": "", "qty": "1 desain (2 sisi)", "price": "Rp90.000", "duration": "1-2 hari" },
-        { "name": "Bronze", "badge": "🥉", "qty": "3 desain", "price": "Rp239.000", "duration": "2-4 hari" },
-        { "name": "Silver", "badge": "🥈", "qty": "5 desain", "price": "Rp379.000", "duration": "4-6 hari" }
+        {
+          "name": "Satuan",
+          "badge": "",
+          "qty": "1 desain (2 sisi)",
+          "price": "Rp90.000",
+          "duration": "1-2 hari"
+        },
+        {
+          "name": "Bronze",
+          "badge": "🥉",
+          "qty": "3 desain",
+          "price": "Rp239.000",
+          "duration": "2-4 hari"
+        },
+        {
+          "name": "Silver",
+          "badge": "🥈",
+          "qty": "5 desain",
+          "price": "Rp379.000",
+          "duration": "4-6 hari"
+        }
       ]
     },
     {
@@ -103,8 +205,20 @@
         "Cetak & rangka banner tidak termasuk"
       ],
       "tiers": [
-        { "name": "Satuan", "badge": "", "qty": "1 desain", "price": "Rp85.000", "duration": "1-2 hari" },
-        { "name": "Bronze", "badge": "🥉", "qty": "3 desain", "price": "Rp229.000", "duration": "2-4 hari" }
+        {
+          "name": "Satuan",
+          "badge": "",
+          "qty": "1 desain",
+          "price": "Rp85.000",
+          "duration": "1-2 hari"
+        },
+        {
+          "name": "Bronze",
+          "badge": "🥉",
+          "qty": "3 desain",
+          "price": "Rp229.000",
+          "duration": "2-4 hari"
+        }
       ]
     },
     {
@@ -117,9 +231,27 @@
         "Logo guideline dasar (warna & font) disertakan untuk paket Silver ke atas"
       ],
       "tiers": [
-        { "name": "Basic", "badge": "", "qty": "1 konsep", "price": "Rp150.000", "duration": "2-3 hari" },
-        { "name": "Bronze", "badge": "🥉", "qty": "3 konsep pilihan", "price": "Rp349.000", "duration": "3-5 hari" },
-        { "name": "Silver", "badge": "🥈", "qty": "3 konsep + guideline", "price": "Rp599.000", "duration": "5-7 hari" }
+        {
+          "name": "Basic",
+          "badge": "",
+          "qty": "1 konsep",
+          "price": "Rp150.000",
+          "duration": "2-3 hari"
+        },
+        {
+          "name": "Bronze",
+          "badge": "🥉",
+          "qty": "3 konsep pilihan",
+          "price": "Rp349.000",
+          "duration": "3-5 hari"
+        },
+        {
+          "name": "Silver",
+          "badge": "🥈",
+          "qty": "3 konsep + guideline",
+          "price": "Rp599.000",
+          "duration": "5-7 hari"
+        }
       ]
     },
     {
@@ -132,7 +264,13 @@
         "Format file akhir: PDF siap cetak"
       ],
       "tiers": [
-        { "name": "Satuan", "badge": "", "qty": "1 desain", "price": "Rp60.000", "duration": "1-2 hari" }
+        {
+          "name": "Satuan",
+          "badge": "",
+          "qty": "1 desain",
+          "price": "Rp60.000",
+          "duration": "1-2 hari"
+        }
       ]
     },
     {
@@ -145,8 +283,20 @@
         "Versi cetak dikenakan biaya tambahan"
       ],
       "tiers": [
-        { "name": "Satuan", "badge": "", "qty": "1 desain", "price": "Rp150.000", "duration": "2-3 hari" },
-        { "name": "Bronze", "badge": "🥉", "qty": "3 varian warna", "price": "Rp299.000", "duration": "3-5 hari" }
+        {
+          "name": "Satuan",
+          "badge": "",
+          "qty": "1 desain",
+          "price": "Rp150.000",
+          "duration": "2-3 hari"
+        },
+        {
+          "name": "Bronze",
+          "badge": "🥉",
+          "qty": "3 varian warna",
+          "price": "Rp299.000",
+          "duration": "3-5 hari"
+        }
       ]
     }
   ],
