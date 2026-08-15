@@ -8,11 +8,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        paper: "#FAF6EC",
-        ink: "#191B22",
+        // Ini racikan warna Dark Mode kita bos!
+        paper: "#0B0F19", // Latar belakang utama (Dark Slate)
+        ink: "#F1F5F9",   // Teks utama (Off-white terang biar ga sakit mata)
         navy: {
-          DEFAULT: "#101A30",
-          light: "#1B2C4D",
+          DEFAULT: "#131C2E", // Warna kotak/tabel
+          light: "#1C283F",   // Warna highlight tabel
         },
         gold: {
           DEFAULT: "#E2A63B",

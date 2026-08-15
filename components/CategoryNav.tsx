@@ -1,35 +1,42 @@
-import { Category } from "@/lib/content";
+import type { Config } from "tailwindcss";
 
-export default function CategoryNav({
-  categories,
-}: {
-  categories: Category[];
-}) {
-  return (
-    <nav
-      aria-label="Lompat ke kategori"
-      className="sticky top-0 z-20 -mx-6 overflow-x-auto border-b border-ink/10 bg-paper/90 px-6 py-3 backdrop-blur"
-    >
-      <ul className="flex w-max gap-2 sm:w-auto sm:flex-wrap">
-        {categories.map((c) => (
-          <li key={c.id}>
-            <a
-              href={`#${c.id}`}
-              className="block whitespace-nowrap rounded-full border border-ink/15 px-3.5 py-1.5 font-mono text-xs text-ink/70 transition hover:border-teal hover:text-teal"
-            >
-              {c.title}
-            </a>
-          </li>
-        ))}
-        <li>
-          <a
-            href="#tnc"
-            className="block whitespace-nowrap rounded-full border border-clay/30 bg-clay/5 px-3.5 py-1.5 font-mono text-xs text-clay transition hover:bg-clay/10"
-          >
-            Syarat &amp; Ketentuan
-          </a>
-        </li>
-      </ul>
-    </nav>
-  );
-}
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Ini racikan warna Dark Mode kita bos!
+        paper: "#0B0F19", // Latar belakang utama (Dark Slate)
+        ink: "#F1F5F9",   // Teks utama (Off-white terang biar ga sakit mata)
+        navy: {
+          DEFAULT: "#131C2E", // Warna kotak/tabel
+          light: "#1C283F",   // Warna highlight tabel
+        },
+        gold: {
+          DEFAULT: "#E2A63B",
+          light: "#F3D08A",
+          dark: "#B87F1E",
+        },
+        teal: {
+          DEFAULT: "#2C6E76",
+          light: "#4A8F97",
+        },
+        clay: "#C6572E",
+      },
+      fontFamily: {
+        display: ["var(--font-display)"],
+        body: ["var(--font-body)"],
+        mono: ["var(--font-mono)"],
+      },
+      backgroundImage: {
+        perforate:
+          "radial-gradient(circle, transparent 3px, currentColor 3.2px)",
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;

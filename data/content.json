@@ -1,358 +1,42 @@
-{
-  "site": {
-    "brand": "Nikola.dsgn",
-    "tagline": "Custom Design Studio — Feed, Poster, Banner & Cetak",
-    "owner": "Nikola.dsgn",
-    "year": "2026",
-    "whatsapp": "6281234567890",
-    "instagram": "nikola.dsgn",
-    "heroNote": "Semua harga di bawah adalah tarif dasar. Estimasi pengerjaan berlaku setelah brief & pembayaran diterima."
-  },
-  "categories": [
-    {
-      "id": "feed-story",
-      "title": "Feed / Story Sosial Media",
-      "unit": "feed",
-      "notes": [
-        "Desain statis tanpa motion",
-        "Ukuran 1080x1350 / 1080x1440 / 1080x1920 px (standar feed & story)",
-        "Format file akhir: PNG / JPG",
-        "Request file master / link Canva dikenakan biaya tambahan",
-        "Desain dibuat dengan aplikasi Affinity dan/atau Canva"
-      ],
-      "tiers": [
-        {
-          "name": "Satuan",
-          "badge": "",
-          "qty": "1 feed",
-          "price": "Rp45.000",
-          "duration": "1-2 hari"
-        },
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "9 feed",
-          "price": "Rp349.000",
-          "duration": "3-5 hari"
-        },
-        {
-          "name": "Silver",
-          "badge": "🥈",
-          "qty": "15 feed",
-          "price": "Rp599.000",
-          "duration": "5-7 hari"
-        },
-        {
-          "name": "Gold",
-          "badge": "🥇",
-          "qty": "30 feed",
-          "price": "Rp1.099.000",
-          "duration": "7-10 hari"
-        }
-      ]
-    },
-    {
-      "id": "carousel",
-      "title": "Carousel Sosial Media",
-      "unit": "slide",
-      "notes": [
-        "Desain statis tanpa motion",
-        "Ukuran 1080x1350 / 1080x1440 px (standar feed)",
-        "Format file akhir: PNG / JPG",
-        "Request file master / link Canva dikenakan biaya tambahan",
-        "Desain dibuat dengan aplikasi Affinity dan/atau Canva"
-      ],
-      "tiers": [
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "5 slide",
-          "price": "Rp179.000",
-          "duration": "1-2 hari"
-        },
-        {
-          "name": "Silver",
-          "badge": "🥈",
-          "qty": "7 slide",
-          "price": "Rp249.000",
-          "duration": "2-3 hari"
-        },
-        {
-          "name": "Gold",
-          "badge": "🥇",
-          "qty": "10 slide",
-          "price": "Rp349.000",
-          "duration": "3-5 hari"
-        }
-      ]
-    },
-    {
-      "id": "poster",
-      "title": "Poster (Digital / Siap Cetak)",
-      "unit": "desain",
-      "notes": [
-        "Ukuran A3 / A2 / custom (400-600 DPI untuk file cetak)",
-        "Format file akhir: PDF / JPG resolusi tinggi",
-        "Cetak fisik tidak termasuk, hanya file desain",
-        "Request file master (.af / .psd) dikenakan biaya tambahan"
-      ],
-      "tiers": [
-        {
-          "name": "Satuan",
-          "badge": "",
-          "qty": "1 desain",
-          "price": "Rp75.000",
-          "duration": "1-2 hari"
-        },
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "3 desain",
-          "price": "Rp199.000",
-          "duration": "2-3 hari"
-        },
-        {
-          "name": "Silver",
-          "badge": "🥈",
-          "qty": "5 desain",
-          "price": "Rp319.000",
-          "duration": "3-5 hari"
-        },
-        {
-          "name": "Gold",
-          "badge": "🥇",
-          "qty": "10 desain",
-          "price": "Rp599.000",
-          "duration": "5-7 hari"
-        }
-      ]
-    },
-    {
-      "id": "banner-mmt",
-      "title": "Banner / Spanduk / MMT",
-      "unit": "desain",
-      "notes": [
-        "Ukuran custom sesuai kebutuhan (contoh: 3x1 m, 4x2 m, dll)",
-        "Format file akhir: PDF / JPG resolusi tinggi siap cetak digital printing",
-        "Cetak & pemasangan fisik tidak termasuk",
-        "Perubahan ukuran setelah desain jadi dihitung revisi tambahan"
-      ],
-      "tiers": [
-        {
-          "name": "Satuan",
-          "badge": "",
-          "qty": "1 desain",
-          "price": "Rp100.000",
-          "duration": "1-2 hari"
-        },
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "3 desain",
-          "price": "Rp269.000",
-          "duration": "2-4 hari"
-        },
-        {
-          "name": "Silver",
-          "badge": "🥈",
-          "qty": "5 desain",
-          "price": "Rp429.000",
-          "duration": "4-6 hari"
-        }
-      ]
-    },
-    {
-      "id": "brosur-flyer",
-      "title": "Brosur / Flyer",
-      "unit": "desain",
-      "notes": [
-        "Desain 1-2 sisi (bolak-balik)",
-        "Ukuran A5 / A4 standar",
-        "Format file akhir: PDF siap cetak",
-        "Copywriting isi disediakan oleh klien"
-      ],
-      "tiers": [
-        {
-          "name": "Satuan",
-          "badge": "",
-          "qty": "1 desain (2 sisi)",
-          "price": "Rp90.000",
-          "duration": "1-2 hari"
-        },
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "3 desain",
-          "price": "Rp239.000",
-          "duration": "2-4 hari"
-        },
-        {
-          "name": "Silver",
-          "badge": "🥈",
-          "qty": "5 desain",
-          "price": "Rp379.000",
-          "duration": "4-6 hari"
-        }
-      ]
-    },
-    {
-      "id": "xbanner",
-      "title": "X-Banner / Roll Banner",
-      "unit": "desain",
-      "notes": [
-        "Ukuran standar 60x160 cm",
-        "Format file akhir: PDF resolusi cetak",
-        "Cetak & rangka banner tidak termasuk"
-      ],
-      "tiers": [
-        {
-          "name": "Satuan",
-          "badge": "",
-          "qty": "1 desain",
-          "price": "Rp85.000",
-          "duration": "1-2 hari"
-        },
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "3 desain",
-          "price": "Rp229.000",
-          "duration": "2-4 hari"
-        }
-      ]
-    },
-    {
-      "id": "logo",
-      "title": "Logo / Identitas Visual",
-      "unit": "konsep",
-      "notes": [
-        "Termasuk 1x konsultasi konsep di awal",
-        "File akhir vector (.ai / .svg) + PNG transparan",
-        "Logo guideline dasar (warna & font) disertakan untuk paket Silver ke atas"
-      ],
-      "tiers": [
-        {
-          "name": "Basic",
-          "badge": "",
-          "qty": "1 konsep",
-          "price": "Rp150.000",
-          "duration": "2-3 hari"
-        },
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "3 konsep pilihan",
-          "price": "Rp349.000",
-          "duration": "3-5 hari"
-        },
-        {
-          "name": "Silver",
-          "badge": "🥈",
-          "qty": "3 konsep + guideline",
-          "price": "Rp599.000",
-          "duration": "5-7 hari"
-        }
-      ]
-    },
-    {
-      "id": "kartu-nama",
-      "title": "Kartu Nama",
-      "unit": "desain",
-      "notes": [
-        "Desain 2 sisi (depan-belakang)",
-        "Ukuran standar 9x5,5 cm + bleed",
-        "Format file akhir: PDF siap cetak"
-      ],
-      "tiers": [
-        {
-          "name": "Satuan",
-          "badge": "",
-          "qty": "1 desain",
-          "price": "Rp60.000",
-          "duration": "1-2 hari"
-        }
-      ]
-    },
-    {
-      "id": "undangan",
-      "title": "Undangan Digital",
-      "unit": "desain",
-      "notes": [
-        "Format landscape/portrait untuk dibagikan digital (WA/IG)",
-        "Termasuk 1 halaman utama, detail acara sesuai brief",
-        "Versi cetak dikenakan biaya tambahan"
-      ],
-      "tiers": [
-        {
-          "name": "Satuan",
-          "badge": "",
-          "qty": "1 desain",
-          "price": "Rp150.000",
-          "duration": "2-3 hari"
-        },
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "3 varian warna",
-          "price": "Rp299.000",
-          "duration": "3-5 hari"
-        }
-      ]
-    }
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  "terms": [
-    {
-      "id": "payment",
-      "title": "Payment",
-      "items": [
-        "Payment dilakukan sebelum desain dikerjakan (full payment / DP minimal 50%)",
-        "Tidak ada refund / pengembalian dana setelah proses pengerjaan desain dimulai",
-        "Pelunasan dilakukan sebelum file final dikirim",
-        "Pembayaran dilakukan melalui QRIS"
-      ]
+  theme: {
+    extend: {
+      colors: {
+        // Ini racikan warna Dark Mode kita bos!
+        paper: "#0B0F19", // Latar belakang utama (Dark Slate)
+        ink: "#F1F5F9",   // Teks utama (Off-white terang biar ga sakit mata)
+        navy: {
+          DEFAULT: "#131C2E", // Warna kotak/tabel
+          light: "#1C283F",   // Warna highlight tabel
+        },
+        gold: {
+          DEFAULT: "#E2A63B",
+          light: "#F3D08A",
+          dark: "#B87F1E",
+        },
+        teal: {
+          DEFAULT: "#2C6E76",
+          light: "#4A8F97",
+        },
+        clay: "#C6572E",
+      },
+      fontFamily: {
+        display: ["var(--font-display)"],
+        body: ["var(--font-body)"],
+        mono: ["var(--font-mono)"],
+      },
+      backgroundImage: {
+        perforate:
+          "radial-gradient(circle, transparent 3px, currentColor 3.2px)",
+      },
     },
-    {
-      "id": "waktu",
-      "title": "Waktu Pengerjaan",
-      "items": [
-        "Desain dikerjakan setelah payment (full payment / DP minimal 50%) diterima",
-        "Proses pengerjaan desain sesuai antrean",
-        "Estimasi 1-2 hari kerja per desain sesuai jumlah dan jenis desain yang dipesan",
-        "Hari kerja: Senin – Sabtu (09.00 – 20.00 WIB)",
-        "Pengerjaan kilat (<24 jam) dikenakan biaya tambahan sebesar 50% dari harga awal",
-        "Tidak termasuk cetak"
-      ]
-    },
-    {
-      "id": "revisi",
-      "title": "Revisi & Materi (Brief)",
-      "items": [
-        "Klien mendapatkan free revisi sebanyak 2x (minor)",
-        "Revisi minor mencakup perubahan warna, jenis huruf (font), atau kesalahan ketik (typo) — bukan perubahan konsep total",
-        "Apabila melewati batas free revisi, akan dikenakan biaya tambahan",
-        "Apabila klien tidak merespon selama 7 hari setelah preview dikirimkan maka order dianggap selesai (free revisi hangus)",
-        "Klien menyediakan materi (teks / copywriting & aset seperti logo, gambar, dll) sebelum pengerjaan dimulai"
-      ]
-    },
-    {
-      "id": "file-final",
-      "title": "File Final",
-      "items": [
-        "File desain yang dikirim adalah PNG / JPG / PDF siap pakai",
-        "Request file master (.af / .psd / link Canva) dikenakan biaya tambahan",
-        "File dikirim langsung melalui WhatsApp atau link drive",
-        "Hak guna sepenuhnya milik klien setelah pelunasan, namun desainer berhak menggunakan karya tersebut untuk keperluan portofolio"
-      ]
-    },
-    {
-      "id": "cetak",
-      "title": "Ketentuan Cetak (jika diminta)",
-      "items": [
-        "Layanan cetak fisik (poster, banner, MMT, brosur, kartu nama) tidak termasuk dalam harga desain kecuali disebutkan lain",
-        "Klien dapat mencetak sendiri menggunakan file PDF/JPG resolusi tinggi yang diberikan",
-        "Jika meminta bantuan pemesanan cetak melalui rekanan percetakan, dikenakan biaya jasa terpisah",
-        "Desainer tidak bertanggung jawab atas hasil warna cetak yang berbeda antar mesin percetakan"
-      ]
-    }
-  ]
-}
+  },
+  plugins: [],
+};
+export default config;

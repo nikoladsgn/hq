@@ -1,61 +1,42 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+import type { Config } from "tailwindcss";
 
-* {
-  -webkit-tap-highlight-color: transparent;
-}
-
-body {
-  background-color: #faf6ec;
-  color: #191b22;
-}
-
-/* Perforated ticket edge, used to divide "ticket" style cards */
-.perf-edge {
-  position: relative;
-}
-.perf-edge::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: -1px;
-  height: 14px;
-  background-image: radial-gradient(
-    circle at 10px 0,
-    #faf6ec 6px,
-    transparent 6.5px
-  );
-  background-size: 20px 14px;
-  background-repeat: repeat-x;
-}
-
-.stamp {
-  transform: rotate(-6deg);
-}
-
-.scroll-fade {
-  animation: fadeUp 0.6s ease both;
-}
-@keyframes fadeUp {
-  from {
-    opacity: 0;
-    transform: translateY(12px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .scroll-fade {
-    animation: none;
-  }
-}
-
-:focus-visible {
-  outline: 2px solid #e2a63b;
-  outline-offset: 2px;
-}
+const config: Config = {
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        // Ini racikan warna Dark Mode kita bos!
+        paper: "#0B0F19", // Latar belakang utama (Dark Slate)
+        ink: "#F1F5F9",   // Teks utama (Off-white terang biar ga sakit mata)
+        navy: {
+          DEFAULT: "#131C2E", // Warna kotak/tabel
+          light: "#1C283F",   // Warna highlight tabel
+        },
+        gold: {
+          DEFAULT: "#E2A63B",
+          light: "#F3D08A",
+          dark: "#B87F1E",
+        },
+        teal: {
+          DEFAULT: "#2C6E76",
+          light: "#4A8F97",
+        },
+        clay: "#C6572E",
+      },
+      fontFamily: {
+        display: ["var(--font-display)"],
+        body: ["var(--font-body)"],
+        mono: ["var(--font-mono)"],
+      },
+      backgroundImage: {
+        perforate:
+          "radial-gradient(circle, transparent 3px, currentColor 3.2px)",
+      },
+    },
+  },
+  plugins: [],
+};
+export default config;
