@@ -1,42 +1,25 @@
-import type { Config } from "tailwindcss";
+"use client";
+import React from 'react';
 
-const config: Config = {
-  content: [
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-    extend: {
-      colors: {
-        // Ini racikan warna Dark Mode kita bos!
-        paper: "#0B0F19", // Latar belakang utama (Dark Slate)
-        ink: "#F1F5F9",   // Teks utama (Off-white terang biar ga sakit mata)
-        navy: {
-          DEFAULT: "#131C2E", // Warna kotak/tabel
-          light: "#1C283F",   // Warna highlight tabel
-        },
-        gold: {
-          DEFAULT: "#E2A63B",
-          light: "#F3D08A",
-          dark: "#B87F1E",
-        },
-        teal: {
-          DEFAULT: "#2C6E76",
-          light: "#4A8F97",
-        },
-        clay: "#C6572E",
-      },
-      fontFamily: {
-        display: ["var(--font-display)"],
-        body: ["var(--font-body)"],
-        mono: ["var(--font-mono)"],
-      },
-      backgroundImage: {
-        perforate:
-          "radial-gradient(circle, transparent 3px, currentColor 3.2px)",
-      },
-    },
-  },
-  plugins: [],
-};
-export default config;
+export default function CategoryNav({ categories }: { categories: any[] }) {
+  const handleScroll = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  return (
+    <div className="sticky top-4 z-50 mb-8 mt-8 flex flex-wrap justify-center gap-2 rounded-2xl border border-white/10 bg-navy/80 p-2 backdrop-blur-md shadow-lg">
+      {categories.map((cat: any) => (
+        <button
+          key={cat.id}
+          onClick={() => handleScroll(cat.id)}
+          className="rounded-xl px-4 py-2 text-xs font-semibold tracking-wide text-ink/80 transition-all hover:bg-gold hover:text-navy"
+        >
+          {cat.title}
+        </button>
+      ))}
+    </div>
+  );
+}
