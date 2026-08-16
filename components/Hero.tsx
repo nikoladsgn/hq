@@ -1,51 +1,36 @@
-import { SiteContent } from "@/lib/content";
-
-export default function Hero({ site }: { site: SiteContent["site"] }) {
+export default function Hero({ site }: { site: any }) {
   return (
-    <header className="relative overflow-hidden bg-navy text-paper">
-      {/* subtle dotted texture, like halftone print stock */}
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.06]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle, #FAF6EC 1px, transparent 1px)",
-          backgroundSize: "14px 14px",
-        }}
-      />
-      <div className="relative mx-auto max-w-4xl px-6 pb-16 pt-14 sm:pt-20">
-        <div className="scroll-fade flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-gold-light">
-          <span className="h-px w-8 bg-gold-light/60" />
+    <div className="flex flex-col items-center justify-center pt-24 pb-12 text-center px-4">
+      <div className="mb-6 flex items-center gap-4 opacity-80">
+        <div className="h-px w-8 bg-gold"></div>
+        <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">
           Studio Order Ticket
-        </div>
-
-        <h1 className="scroll-fade mt-5 font-display text-4xl font-semibold italic leading-[1.05] sm:text-6xl">
-          Pricelist
-          <br />
-          <span className="not-italic text-gold-light">Custom Design</span>
-        </h1>
-
-        <p className="scroll-fade mt-5 max-w-xl text-sm text-paper/70 sm:text-base">
-          {site.tagline}
         </p>
-
-        <div className="scroll-fade mt-8 flex flex-wrap items-center gap-3">
-          <span className="rounded-full border border-paper/20 bg-paper/5 px-4 py-1.5 font-mono text-xs tracking-wide">
-            {site.owner} · {site.year}
-          </span>
-          {site.instagram && (
-            <a
-              href={`https://instagram.com/${site.instagram}`}
-              target="_blank"
-              className="rounded-full border border-gold-light/40 px-4 py-1.5 font-mono text-xs tracking-wide text-gold-light transition hover:bg-gold-light/10"
-            >
-              @{site.instagram}
-            </a>
-          )}
-        </div>
+        <div className="h-px w-8 bg-gold"></div>
       </div>
+      
+      <h1 className="font-display flex flex-col gap-2 mb-8 text-5xl font-bold tracking-tight text-white md:text-7xl">
+        <span className="text-white/40 italic font-serif text-4xl md:text-5xl">Pricelist</span>
+        <span className="text-gold">{site.tagline}</span>
+      </h1>
 
-      {/* perforated tear edge into the page below */}
-      <div className="perf-edge text-navy h-4 bg-navy" />
-    </header>
+      <div className="mt-6 flex flex-wrap items-center justify-center gap-3 text-sm font-medium">
+        {site.instagram && (
+          <a href={`https://instagram.com/${site.instagram}`} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-ink/90 transition-all hover:bg-gold hover:text-navy">
+            IG: @{site.instagram}
+          </a>
+        )}
+        {site.tiktok && (
+          <a href={`https://tiktok.com/@${site.tiktok}`} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-ink/90 transition-all hover:bg-gold hover:text-navy">
+            TikTok: @{site.tiktok}
+          </a>
+        )}
+        {site.lynk && (
+          <a href={`https://${site.lynk}`} target="_blank" rel="noreferrer" className="rounded-full border border-white/10 bg-white/5 px-5 py-2.5 text-ink/90 transition-all hover:bg-gold hover:text-navy">
+            {site.lynk}
+          </a>
+        )}
+      </div>
+    </div>
   );
 }
