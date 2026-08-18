@@ -1,35 +1,29 @@
-import { SiteContent } from "@/lib/content";
+import React from 'react';
 
-export default function Footer({ site }: { site: SiteContent["site"] }) {
-  const waLink = site.whatsapp
-    ? `https://wa.me/${site.whatsapp}?text=${encodeURIComponent(
-        "Halo, saya mau order desain di " + site.brand
-      )}`
-    : "#";
+export default function Footer({ site }: { site: any }) {
+  // Fitur Auto-Text WA (Bisa bos edit teksnya di sini nanti)
+  const waMessage = "Halo tim Nikola.dsgn! 👋%0A%0ASaya mau order desain nih.%0ABoleh minta form pengisian brief-nya?";
 
   return (
-    <footer className="bg-paper py-16">
-      <div className="mx-auto max-w-4xl px-6 text-center">
-        <div className="rounded-3xl bg-gold px-6 py-10 sm:px-10">
-          <h2 className="font-display text-2xl font-semibold text-navy sm:text-3xl">
-            Order desainmu sekarang!
-          </h2>
-          <p className="mx-auto mt-2 max-w-md text-sm text-navy/70">
-            Kirim brief lengkap via WhatsApp, tim kami bantu proses dari DP
-            sampai file final.
-          </p>
+    <footer className="bg-paper pb-12 pt-8">
+      <div className="mx-auto max-w-3xl px-6 text-center">
+        {/* CTA Box Kuning */}
+        <div className="mb-16 rounded-3xl bg-gold p-8 shadow-2xl md:p-12">
+          <h2 className="mb-4 font-display text-3xl font-bold text-navy md:text-4xl">Order desainmu sekarang!</h2>
+          <p className="mb-8 text-sm font-medium text-navy/80 md:text-base">Kirim brief lengkap via WhatsApp, tim kami bantu proses dari DP sampai file final.</p>
           <a
-            href={waLink}
+            href={`https://wa.me/${site.whatsapp}?text=${waMessage}`}
             target="_blank"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-navy px-6 py-3 font-mono text-sm font-medium text-paper transition hover:bg-navy-light"
+            rel="noreferrer"
+            className="inline-block rounded-full bg-navy px-8 py-4 text-sm font-bold tracking-wide text-white transition-transform hover:scale-105"
           >
             Chat via WhatsApp →
           </a>
         </div>
 
-        <p className="mt-10 font-mono text-xs text-ink/40">
-          {site.brand} — {site.year} · Terima kasih telah mempercayakan
-          desain Anda kepada kami 🙏
+        {/* Copyright */}
+        <p className="text-xs font-medium tracking-wider text-ink/40">
+          {site.brand} — {site.year} · Terima kasih telah mempercayakan desain Anda kepada kami 🙏
         </p>
       </div>
     </footer>

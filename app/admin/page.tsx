@@ -83,15 +83,15 @@ export default function AdminPage() {
 
   if (!authed) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-navy px-6">
+      <main className="flex min-h-screen items-center justify-center bg-paper px-6">
         <form
           onSubmit={handleLogin}
-          className="w-full max-w-sm rounded-2xl border border-paper/15 bg-paper/[0.04] p-8"
+          className="w-full max-w-sm rounded-2xl border border-white/10 bg-navy p-8 shadow-2xl"
         >
-          <p className="font-mono text-xs uppercase tracking-[0.25em] text-gold-light">
+          <p className="font-mono text-xs uppercase tracking-[0.25em] text-gold">
             Admin Access
           </p>
-          <h1 className="mt-3 font-display text-2xl font-semibold text-paper">
+          <h1 className="mt-3 font-display text-2xl font-semibold text-ink">
             Masuk ke Dashboard
           </h1>
           <input
@@ -99,7 +99,7 @@ export default function AdminPage() {
             placeholder="Password admin"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="mt-6 w-full rounded-lg border border-paper/20 bg-transparent px-4 py-2.5 text-paper placeholder:text-paper/40 focus:border-gold-light"
+            className="mt-6 w-full rounded-lg border border-white/20 bg-navy-light px-4 py-2.5 text-ink placeholder:text-ink/40 focus:border-gold outline-none transition-colors"
             autoFocus
           />
           {loginError && (
@@ -127,7 +127,7 @@ export default function AdminPage() {
 
   return (
     <main className="min-h-screen bg-paper pb-32">
-      <div className="sticky top-0 z-30 flex items-center justify-between border-b border-ink/10 bg-paper/95 px-6 py-4 backdrop-blur">
+      <div className="sticky top-0 z-30 flex items-center justify-between border-b border-white/10 bg-paper/95 px-6 py-4 backdrop-blur shadow-sm">
         <div>
           <p className="font-mono text-xs uppercase tracking-widest text-teal">
             Admin Dashboard
@@ -139,7 +139,7 @@ export default function AdminPage() {
         <div className="flex items-center gap-3">
           {status.type !== "idle" && (
             <span
-              className={`max-w-xs text-xs ${
+              className={`max-w-xs text-xs font-medium ${
                 status.type === "ok" ? "text-teal" : "text-clay"
               }`}
             >
@@ -149,14 +149,14 @@ export default function AdminPage() {
           <a
             href="/"
             target="_blank"
-            className="rounded-full border border-ink/15 px-4 py-2 font-mono text-xs text-ink/60 hover:border-teal hover:text-teal"
+            className="rounded-full border border-white/20 px-4 py-2 font-mono text-xs text-ink/80 transition-colors hover:border-teal hover:text-teal"
           >
             Lihat Situs ↗
           </a>
           <button
             onClick={handleSave}
             disabled={saving}
-            className="rounded-full bg-navy px-5 py-2 font-mono text-xs font-medium text-paper hover:bg-navy-light disabled:opacity-60"
+            className="rounded-full bg-gold px-5 py-2 font-mono text-xs font-bold text-navy transition-colors hover:bg-gold-light disabled:opacity-60"
           >
             {saving ? "Menyimpan..." : "Simpan Perubahan"}
           </button>
@@ -202,15 +202,30 @@ export default function AdminPage() {
                 setContent({ ...content, site: { ...content.site, instagram: v } })
               }
             />
+            <Field
+              label="TikTok (tanpa @)"
+              value={content.site.tiktok || ""}
+              onChange={(v) =>
+                setContent({ ...content, site: { ...content.site, tiktok: v } })
+              }
+            />
           </div>
-          <Field
-            label="Tagline"
-            value={content.site.tagline}
-            onChange={(v) =>
-              setContent({ ...content, site: { ...content.site, tagline: v } })
-            }
-            className="mt-4"
-          />
+          <div className="grid gap-4 sm:grid-cols-2 mt-4">
+             <Field
+                label="Link (Lynk.id/dst)"
+                value={content.site.lynk || ""}
+                onChange={(v) =>
+                  setContent({ ...content, site: { ...content.site, lynk: v } })
+                }
+              />
+              <Field
+                label="Tagline"
+                value={content.site.tagline}
+                onChange={(v) =>
+                  setContent({ ...content, site: { ...content.site, tagline: v } })
+                }
+              />
+          </div>
           <Field
             label="Catatan di bawah navigasi (heroNote)"
             value={content.site.heroNote}
@@ -247,7 +262,7 @@ export default function AdminPage() {
                 categories: [...content.categories, emptyCategory()],
               })
             }
-            className="mt-4 rounded-lg border border-dashed border-teal/50 px-4 py-2 font-mono text-xs text-teal hover:bg-teal/5"
+            className="mt-6 w-full rounded-xl border border-dashed border-teal/50 bg-teal/5 py-4 font-mono text-sm text-teal transition-colors hover:bg-teal/10 hover:border-teal"
           >
             + Tambah Kategori
           </button>
@@ -276,9 +291,9 @@ export default function AdminPage() {
             onClick={() =>
               setContent({ ...content, terms: [...content.terms, emptyTerm()] })
             }
-            className="mt-4 rounded-lg border border-dashed border-clay/50 px-4 py-2 font-mono text-xs text-clay hover:bg-clay/5"
+            className="mt-6 w-full rounded-xl border border-dashed border-gold/50 bg-gold/5 py-4 font-mono text-sm text-gold transition-colors hover:bg-gold/10 hover:border-gold"
           >
-            + Tambah Bagian Syarat
+            + Tambah Syarat & Ketentuan
           </button>
         </Section>
       </div>
@@ -290,9 +305,9 @@ export default function AdminPage() {
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
-    <section className="mb-10 rounded-2xl border border-ink/10 bg-white p-6">
-      <h2 className="font-display text-lg font-semibold text-ink">{title}</h2>
-      <div className="mt-4">{children}</div>
+    <section className="mb-8 rounded-2xl border border-white/10 bg-navy p-6 shadow-xl">
+      <h2 className="font-display text-xl font-semibold text-ink border-b border-white/10 pb-4">{title}</h2>
+      <div className="mt-6">{children}</div>
     </section>
   );
 }
@@ -310,14 +325,14 @@ function Field({
 }) {
   return (
     <label className={`block ${className}`}>
-      <span className="font-mono text-[11px] uppercase tracking-wide text-ink/40">
+      <span className="mb-1.5 block font-mono text-[11px] uppercase tracking-wide text-ink/60">
         {label}
       </span>
       <input
         type="text"
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="mt-1 w-full rounded-lg border border-ink/15 px-3 py-2 text-sm text-ink focus:border-teal"
+        className="w-full rounded-lg border border-white/10 bg-navy-light px-3 py-2.5 text-sm text-ink outline-none transition-colors focus:border-teal focus:bg-white/5"
       />
     </label>
   );
@@ -333,7 +348,7 @@ function ListEditor({
   placeholder: string;
 }) {
   return (
-    <div className="space-y-2">
+    <div className="space-y-3">
       {items.map((item, i) => (
         <div key={i} className="flex gap-2">
           <input
@@ -344,11 +359,11 @@ function ListEditor({
               next[i] = e.target.value;
               onChange(next);
             }}
-            className="w-full rounded-lg border border-ink/15 px-3 py-1.5 text-sm text-ink focus:border-teal"
+            className="w-full rounded-lg border border-white/10 bg-navy-light px-3 py-2 text-sm text-ink outline-none transition-colors focus:border-teal"
           />
           <button
             onClick={() => onChange(items.filter((_, idx) => idx !== i))}
-            className="rounded-lg border border-ink/10 px-2.5 text-ink/40 hover:border-clay hover:text-clay"
+            className="flex w-10 items-center justify-center rounded-lg border border-white/10 bg-navy-light text-ink/50 transition-colors hover:border-clay hover:text-clay hover:bg-clay/10"
             aria-label="Hapus baris"
             type="button"
           >
@@ -359,7 +374,7 @@ function ListEditor({
       <button
         type="button"
         onClick={() => onChange([...items, ""])}
-        className="font-mono text-xs text-ink/40 hover:text-teal"
+        className="inline-block rounded-lg px-3 py-1.5 font-mono text-xs text-ink/50 transition-colors hover:bg-white/5 hover:text-teal"
       >
         + {placeholder}
       </button>
@@ -379,9 +394,9 @@ function CategoryEditor({
   onDelete: () => void;
 }) {
   return (
-    <div className="rounded-xl border border-ink/10 bg-paper/40 p-5">
-      <div className="flex items-start justify-between gap-3">
-        <div className="grid flex-1 gap-3 sm:grid-cols-2">
+    <div className="relative overflow-hidden rounded-xl border border-white/10 bg-white/[0.02] p-5">
+      <div className="flex items-start justify-between gap-4">
+        <div className="grid flex-1 gap-4 sm:grid-cols-2">
           <Field
             label="Judul Kategori"
             value={category.title}
@@ -396,21 +411,21 @@ function CategoryEditor({
         <button
           type="button"
           onClick={onDelete}
-          className="mt-6 whitespace-nowrap rounded-lg border border-clay/30 px-3 py-1.5 font-mono text-xs text-clay hover:bg-clay/5"
+          className="mt-6 whitespace-nowrap rounded-lg border border-clay/30 px-3 py-2 font-mono text-xs text-clay transition-colors hover:bg-clay/10"
         >
-          Hapus Kategori
+          Hapus
         </button>
       </div>
 
-      <div className="mt-4">
-        <p className="font-mono text-[11px] uppercase tracking-wide text-ink/40">
+      <div className="mt-6 rounded-lg bg-navy-light/50 p-4 border border-white/5">
+        <p className="mb-3 font-mono text-[11px] uppercase tracking-wide text-gold">
           Paket Harga
         </p>
-        <div className="mt-2 space-y-3">
+        <div className="space-y-2">
           {category.tiers.map((tier, i) => (
             <div
               key={i}
-              className="grid grid-cols-2 gap-2 rounded-lg border border-ink/10 bg-white p-3 sm:grid-cols-5"
+              className="grid grid-cols-2 gap-2 rounded-lg border border-white/10 bg-navy p-2 sm:grid-cols-5"
             >
               <input
                 value={tier.badge}
@@ -419,8 +434,8 @@ function CategoryEditor({
                   tiers[i] = { ...tier, badge: e.target.value };
                   onChange({ ...category, tiers });
                 }}
-                placeholder="🥇"
-                className="rounded border border-ink/10 px-2 py-1.5 text-sm"
+                placeholder="🥇 Emoji"
+                className="rounded border border-white/5 bg-navy-light px-3 py-2 text-sm text-ink outline-none focus:border-teal"
               />
               <input
                 value={tier.name}
@@ -430,7 +445,7 @@ function CategoryEditor({
                   onChange({ ...category, tiers });
                 }}
                 placeholder="Nama paket"
-                className="rounded border border-ink/10 px-2 py-1.5 text-sm"
+                className="rounded border border-white/5 bg-navy-light px-3 py-2 text-sm text-ink outline-none focus:border-teal"
               />
               <input
                 value={tier.qty}
@@ -440,7 +455,7 @@ function CategoryEditor({
                   onChange({ ...category, tiers });
                 }}
                 placeholder="Jumlah"
-                className="rounded border border-ink/10 px-2 py-1.5 text-sm"
+                className="rounded border border-white/5 bg-navy-light px-3 py-2 text-sm text-ink outline-none focus:border-teal"
               />
               <input
                 value={tier.price}
@@ -450,7 +465,7 @@ function CategoryEditor({
                   onChange({ ...category, tiers });
                 }}
                 placeholder="Rp0"
-                className="rounded border border-ink/10 px-2 py-1.5 text-sm font-mono text-teal"
+                className="rounded border border-white/5 bg-navy-light px-3 py-2 text-sm font-mono text-gold outline-none focus:border-teal"
               />
               <div className="flex gap-2">
                 <input
@@ -461,7 +476,7 @@ function CategoryEditor({
                     onChange({ ...category, tiers });
                   }}
                   placeholder="1-2 hari"
-                  className="w-full rounded border border-ink/10 px-2 py-1.5 text-sm"
+                  className="w-full rounded border border-white/5 bg-navy-light px-3 py-2 text-sm text-ink outline-none focus:border-teal"
                 />
                 <button
                   type="button"
@@ -471,7 +486,7 @@ function CategoryEditor({
                       tiers: category.tiers.filter((_, idx) => idx !== i),
                     })
                   }
-                  className="rounded border border-ink/10 px-2 text-ink/40 hover:border-clay hover:text-clay"
+                  className="flex w-10 items-center justify-center rounded border border-white/5 bg-navy-light text-ink/50 transition-colors hover:border-clay hover:bg-clay/10 hover:text-clay"
                 >
                   ×
                 </button>
@@ -484,23 +499,21 @@ function CategoryEditor({
           onClick={() =>
             onChange({ ...category, tiers: [...category.tiers, emptyTier()] })
           }
-          className="mt-2 font-mono text-xs text-teal hover:underline"
+          className="mt-3 inline-block rounded-lg px-3 py-1.5 font-mono text-xs text-teal transition-colors hover:bg-white/5"
         >
           + Tambah Paket
         </button>
       </div>
 
-      <div className="mt-4">
-        <p className="font-mono text-[11px] uppercase tracking-wide text-ink/40">
-          Catatan (Note)
+      <div className="mt-6">
+        <p className="mb-3 font-mono text-[11px] uppercase tracking-wide text-gold">
+          Catatan & Syarat Khusus (Opsional)
         </p>
-        <div className="mt-2">
-          <ListEditor
-            items={category.notes}
-            onChange={(notes) => onChange({ ...category, notes })}
-            placeholder="Tambah catatan"
-          />
-        </div>
+        <ListEditor
+          items={category.notes}
+          onChange={(notes) => onChange({ ...category, notes })}
+          placeholder="Tambah catatan"
+        />
       </div>
     </div>
   );
@@ -518,10 +531,10 @@ function TermEditor({
   onDelete: () => void;
 }) {
   return (
-    <div className="rounded-xl border border-ink/10 bg-paper/40 p-5">
-      <div className="flex items-end justify-between gap-3">
+    <div className="rounded-xl border border-white/10 bg-white/[0.02] p-5">
+      <div className="flex items-end justify-between gap-4">
         <Field
-          label="Judul Bagian"
+          label="Judul Aturan"
           value={term.title}
           onChange={(v) => onChange({ ...term, title: v })}
           className="flex-1"
@@ -529,16 +542,16 @@ function TermEditor({
         <button
           type="button"
           onClick={onDelete}
-          className="mb-0.5 whitespace-nowrap rounded-lg border border-clay/30 px-3 py-1.5 font-mono text-xs text-clay hover:bg-clay/5"
+          className="mb-0.5 whitespace-nowrap rounded-lg border border-clay/30 px-3 py-2 font-mono text-xs text-clay transition-colors hover:bg-clay/10"
         >
           Hapus Bagian
         </button>
       </div>
-      <div className="mt-3">
+      <div className="mt-5 rounded-lg bg-navy-light/50 p-4 border border-white/5">
         <ListEditor
           items={term.items}
           onChange={(items) => onChange({ ...term, items })}
-          placeholder="Tambah poin"
+          placeholder="Tambah poin detail aturan"
         />
       </div>
     </div>

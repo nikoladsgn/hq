@@ -1,38 +1,28 @@
-import { TermSection } from "@/lib/content";
+"use client";
+import React from 'react';
 
-export default function TermsSection({ terms }: { terms: TermSection[] }) {
+export default function TermsSection({ terms }: { terms: any[] }) {
   return (
-    <section id="tnc" className="scroll-mt-20 bg-navy py-16 text-paper">
-      <div className="mx-auto max-w-4xl px-6">
-        <div className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.25em] text-gold-light">
-          <span className="h-px w-8 bg-gold-light/60" />
-          Term &amp; Condition
+    <section className="py-16 border-t border-white/10 bg-paper">
+      <div className="mx-auto max-w-3xl px-6">
+        <div className="mb-12 text-center">
+          <div className="mb-4 flex items-center justify-center gap-4 opacity-80">
+            <div className="h-px w-8 bg-gold"></div>
+            <p className="text-xs font-bold uppercase tracking-[0.2em] text-gold">Term & Condition</p>
+            <div className="h-px w-8 bg-gold"></div>
+          </div>
+          <h2 className="font-display text-4xl font-semibold italic text-white">Syarat & Ketentuan</h2>
         </div>
-        <h2 className="mt-4 font-display text-3xl font-semibold italic sm:text-4xl">
-          Syarat &amp; Ketentuan
-        </h2>
-
-        <div className="mt-8 space-y-4">
-          {terms.map((section) => (
-            <details
-              key={section.id}
-              className="group rounded-xl border border-paper/15 bg-paper/[0.04] px-5 py-4 open:bg-paper/[0.07]"
-            >
-              <summary className="flex cursor-pointer list-none items-center justify-between font-display text-lg font-medium">
-                {section.title}
-                <span className="ml-4 font-mono text-gold-light transition group-open:rotate-45">
-                  +
-                </span>
-              </summary>
-              <ul className="mt-3 space-y-2 border-t border-paper/10 pt-3 text-sm text-paper/75">
-                {section.items.map((item, i) => (
-                  <li key={i} className="flex gap-2">
-                    <span className="mt-0.5 text-gold-light">—</span>
-                    <span>{item}</span>
-                  </li>
+        <div className="space-y-4">
+          {terms.map((term: any, i: number) => (
+            <div key={i} className="rounded-2xl border border-white/10 bg-navy p-6 shadow-lg">
+              <h3 className="mb-4 text-lg font-bold text-gold">{term.title}</h3>
+              <ul className="list-inside list-disc space-y-2 text-sm text-ink/80">
+                {term.items.map((item: string, idx: number) => (
+                  <li key={idx} className="leading-relaxed">{item}</li>
                 ))}
               </ul>
-            </details>
+            </div>
           ))}
         </div>
       </div>
