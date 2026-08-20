@@ -31,6 +31,8 @@ export type SiteContent = {
     year: string;
     whatsapp: string;
     instagram: string;
+    tiktok?: string;
+    lynk?: string;
     heroNote: string;
   };
   categories: Category[];
