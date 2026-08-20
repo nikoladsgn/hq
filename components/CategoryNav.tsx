@@ -9,17 +9,23 @@ export default function CategoryNav({ categories }: { categories: any[] }) {
     }
   };
 
+  // Kita cari ID kategori pertama untuk tombol Jasa Desain (Biar otomatis scroll ke promo/feed)
+  const firstCategoryId = categories.length > 0 ? categories[0].id : '';
+
   return (
-    <div className="sticky top-4 z-50 mb-8 mt-8 flex flex-wrap justify-center gap-2 rounded-2xl border border-white/10 bg-navy/80 p-2 backdrop-blur-md shadow-lg">
-      {categories.map((cat: any) => (
-        <button
-          key={cat.id}
-          onClick={() => handleScroll(cat.id)}
-          className="rounded-xl px-4 py-2 text-xs font-semibold tracking-wide text-ink/80 transition-all hover:bg-gold hover:text-navy"
-        >
-          {cat.title}
-        </button>
-      ))}
+    <div className="sticky top-4 z-50 mb-8 mt-8 flex flex-wrap justify-center gap-4 p-2">
+      <button
+        onClick={() => handleScroll(firstCategoryId)}
+        className="rounded-full bg-gold px-6 py-3 text-sm font-bold tracking-wide text-navy shadow-lg transition-transform hover:scale-105"
+      >
+        🎨 Jasa Desain
+      </button>
+      <button
+        onClick={() => handleScroll('video-editing')}
+        className="rounded-full bg-navy-light border border-white/10 px-6 py-3 text-sm font-bold tracking-wide text-ink shadow-lg transition-transform hover:scale-105 hover:border-gold hover:text-gold"
+      >
+        🎬 Video Editing
+      </button>
     </div>
   );
 }
