@@ -1,14 +1,26 @@
-import { getContent } from "@/lib/content";
+import { kv } from "@vercel/kv";
+import { getContent as getFallbackContent } from "@/lib/content";
 import Hero from "@/components/Hero";
 import CategoryNav from "@/components/CategoryNav";
 import PriceCategory from "@/components/PriceCategory";
 import TermsSection from "@/components/TermsSection";
 import Footer from "@/components/Footer";
 
-export default function HomePage() {
-  const content = getContent();
+// Paksa Vercel untuk selalu mengambil harga terbaru dari database, bukan dari cache
+export const revalidate = 0;
+
+export default async function HomePage() {
+  let content: any = getFallbackContent();
   
-  // Ini kalimat auto-text WA yang akan otomatis muncul saat tombol ditekan
+  try {
+    if (process.env.KV_REST_API_URL) {
+      const dbContent = await kv.get("site-content");
+      if (dbContent) content = dbContent;
+    }
+  } catch (e) {
+    console.log("Database belum jalan");
+  }
+  
   const waMessage = "Halo tim Nikola.dsgn! 👋%0A%0ASaya mau order desain nih.%0ABoleh minta form pengisian brief-nya?";
 
   return (
@@ -32,7 +44,6 @@ export default function HomePage() {
       <TermsSection terms={content.terms} />
       <Footer site={content.site} />
 
-      {/* Tombol WA Melayang (Warna Gold) */}
       <a
         href={`https://wa.me/${content.site.whatsapp}?text=${waMessage}`}
         target="_blank"
