@@ -98,78 +98,45 @@
       "tiers": [
         {
           "name": "Kartu Nama",
-          "badge": "📇",
+          "badge": "",
           "qty": "1 desain (2 sisi)",
           "price": "Rp60.000",
           "duration": "1-2 hari"
         },
         {
           "name": "Poster",
-          "badge": "📄",
+          "badge": "",
           "qty": "1 desain",
           "price": "Rp75.000",
           "duration": "1-2 hari"
         },
         {
           "name": "X-Banner / Roll",
-          "badge": "🧍",
+          "badge": "",
           "qty": "1 desain",
           "price": "Rp85.000",
           "duration": "1-2 hari"
         },
         {
           "name": "Brosur / Flyer",
-          "badge": "📰",
+          "badge": "",
           "qty": "1 desain (2 sisi)",
           "price": "Rp90.000",
           "duration": "1-2 hari"
         },
         {
           "name": "Banner / MMT",
-          "badge": "🚩",
+          "badge": "",
           "qty": "1 desain",
           "price": "Rp100.000",
           "duration": "1-2 hari"
         },
         {
           "name": "Undangan Digital",
-          "badge": "💌",
+          "badge": "",
           "qty": "1 desain",
           "price": "Rp150.000",
           "duration": "2-3 hari"
-        }
-      ]
-    },
-    {
-      "id": "logo",
-      "title": "Logo / Identitas Visual",
-      "unit": "konsep",
-      "notes": [
-        "Termasuk 1x konsultasi konsep di awal",
-        "File akhir vector (.ai / .svg) + PNG transparan",
-        "Logo guideline dasar disertakan untuk paket Silver"
-      ],
-      "tiers": [
-        {
-          "name": "Basic",
-          "badge": "",
-          "qty": "1 konsep",
-          "price": "Rp150.000",
-          "duration": "2-3 hari"
-        },
-        {
-          "name": "Bronze",
-          "badge": "🥉",
-          "qty": "3 konsep",
-          "price": "Rp349.000",
-          "duration": "3-5 hari"
-        },
-        {
-          "name": "Silver",
-          "badge": "🥈",
-          "qty": "3 konsep + guide",
-          "price": "Rp599.000",
-          "duration": "5-7 hari"
         }
       ]
     }
