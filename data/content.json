@@ -26,26 +26,26 @@
           "name": "Satuan",
           "badge": "",
           "qty": "1 feed",
-          "price": "Rp50.000",
+          "price": "Rp45.000",
           "duration": "1-2 hari"
         },
         {
           "name": "Bronze",
-          "badge": "🥉",
+          "badge": "",
           "qty": "9 feed",
           "price": "Rp349.000",
           "duration": "3-5 hari"
         },
         {
           "name": "Silver",
-          "badge": "🥈",
+          "badge": "",
           "qty": "15 feed",
           "price": "Rp599.000",
           "duration": "5-7 hari"
         },
         {
           "name": "Gold",
-          "badge": "🥇",
+          "badge": "",
           "qty": "30 feed",
           "price": "Rp1.099.000",
           "duration": "7-10 hari"
